@@ -1,0 +1,51 @@
+﻿@model News
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class="inner-page-content">
+        <div class="l-center">
+            <div class="news-container">
+                <div class="inner_news">
+                    <div class="when-second">
+                        <div class="when-date">
+                            <div class="date-day"> @Model.CreationDate.Day.ToString()</div>
+                            <div class="date-month">@Model.CreationDate.Month.ToString()</div>
+                            <div class="date-year">@Model.CreationDate.Year.ToString()</div>
+                        </div>
+                        <div class="when-time2">@Model.CreationDate.Hour.ToString()</div>
+                    </div>
+                    <img class="inner-news-img" src="~/images/@Model.ImageName" alt="">
+                    <div class="stats">
+                        <div class="like2 second-i">
+
+                            <span class="">
+                                <i class="fas fa-thumbs-up"></i>
+                                @Model.Like
+                            </span>
+                        </div>
+                        <div class="dislike2 second-i ">
+                            <span>
+                                <i class="fas fa-thumbs-down"></i>
+                                @Model.Dislike
+                            </span>
+                        </div>
+                        <div class="view2 second-i">
+                            <span><i class="fas fa-eye"></i>@Model.View</span>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <a class="audio-btn" href="#"><i class="fas fa-play"></i></a>
+                    </div>
+                    <div class="counter"></div>
+                    <div class="news-inner-text">
+                        <h1>@Model.Name</h1>
+                        <p>@Model.Content</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

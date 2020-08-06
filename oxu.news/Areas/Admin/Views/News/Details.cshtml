@@ -1,0 +1,62 @@
+﻿@model oxu.news.Models.News
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <dl>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+            </dt>
+            <dd class="col-sm-10">
+                <img src="~/images/@Model.ImageName" style="width:500px; height:auto" />
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CreationDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Like)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Like)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Dislike)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Dislike)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.View)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.View)
+            </dd>
+            <a asp-action="Index" class="btn btn-secondary">Back to list</a>
+        </dl>
+        <div>
+
+    </div>
+</div>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<oxu.news.Models.News>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="m-0 justify-content-center d-flex">
+    <div class="row m-0 col-12">
+    <a asp-action="Create" type="submit" class="btn btn-outline-primary mb-4">Create</a>
+
+        <table class="table table-responsive">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Content)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.ImageName)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.CreationDate)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Like)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Dislike)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.View)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        <span>Type Details to see</span>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImageName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreationDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Like)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dislike)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.View)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

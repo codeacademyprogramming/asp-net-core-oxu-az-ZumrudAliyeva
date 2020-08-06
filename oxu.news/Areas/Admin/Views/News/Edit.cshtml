@@ -1,0 +1,48 @@
+﻿@model oxu.news.Models.News
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Like" class="form-control" value="0" />
+                    <input type="hidden" asp-for="Dislike" class="form-control" value="0" />
+                    <input type="hidden" asp-for="View" class="form-control" value="0" />
+                    <input type="hidden" asp-for="ImageName" class="form-control" />
+
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" placeholder="News name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Content" class="control-label"></label>
+                        <textarea asp-for="Content" placeholder="News content" class="form-control" style="max-height: 500px;"></textarea>
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ImageName" class="control-label"></label>
+                        <input type="file" asp-for="FormFile" class="form-control" />
+                        <span asp-validation-for="FormFile" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CreationDate" class="control-label"></label>
+                        <input asp-for="CreationDate" class="form-control" />
+                        <span asp-validation-for="CreationDate" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-inline">
+                        <input type="submit" value="Edit" class="btn btn-warning mr-4" />
+                        <input asp-action="Index" type="submit" value="Cancel" class="btn btn-secondary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

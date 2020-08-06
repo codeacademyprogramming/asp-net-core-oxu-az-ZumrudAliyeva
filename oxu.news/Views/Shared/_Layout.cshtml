@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/54e137977b.js" crossorigin="anonymous"></script>
+    
+    <title>OxuAZ</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-primary">
+            <div class="l-center">
+                <div class="header-side">
+                    <a class="link" href="">Haqqımızda</a>
+                    <a class="link" href="">Reklam</a>
+                    <div class="social-icon">
+                        <a class="facebook icon" href=""><i class="fab fa-facebook-square"></i></a>
+                        <a class="twit icon" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="andorid icon" href=""><i class="fas fa-robot"></i></a>
+                        <a class="iphone icon" href=""><i class="fab fa-apple"></i></a>
+                    </div>
+                    <div class="search"></div>
+                    <div class="search-container">
+                        <form action="">
+                            <input class="search-input" type="text" placeholder="Axtarış">
+                            <button class="submit" type="submit">
+                                <i class="fas fa-search sub"></i>
+
+                            </button>
+                        </form>
+                    </div>
+                    <a class="language" href="">ru</a>
+                </div>
+                <a class="logo" href="">oxu.az</a>
+                <div class="nav-toggle"></div>
+            </div>
+        </div>
+        <div class="nav-container">
+            <div class="l-center">
+                <nav class="nav">
+                    <a class="nav-i nav-i-current " href="/">Baş səhifə</a>
+                    <a href="" class="nav-i">Siyasət</a>
+                    <a href="" class="nav-i">İqtisadiyyat</a>
+                    <a href="" class="nav-i">Cəmiyyət</a>
+                    <a href="" class="nav-i">Şou-biznes</a>
+                    <a href="" class="nav-i">Müharibə</a>
+                    <a href="" class="nav-i">İdman</a>
+                    <a href="" class="nav-i">Kriminal</a>
+                    <a href="" class="nav-i">Mədəniyyət</a>
+                    <a href="" class="nav-i">Dünya</a>
+                    <a href="" class="nav-i">Avto-Moto</a>
+                    <a href="" class="nav-i">İKT</a>
+                    <a href="" class="nav-i">Turizm</a>
+                    <a href="" class="nav-i">Maraqlı</a>
+                    <a href="" class="nav-i">Müsahibə</a>
+                    <a href="" class="nav-i">Baku TV</a>
+                    <a href="" class="nav-i">CinemaPlus</a>
+                </nav>
+            </div>
+            <div class="nav-banner">
+                <div class="l-center">
+                    <a class="nav-i title" href="/">Azərbaycanda koronavirusla bağlı xəbərlər</a>
+                    <a class="nav-i title-static" href="/">Koronavirus Onlayn Statistika</a>
+                    <a class="nav-i nav-i-all" href="/">Bütün xəbərlər</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - oxu.news - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
